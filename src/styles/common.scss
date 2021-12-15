@@ -1,0 +1,154 @@
+@import "./colors.scss";
+
+// dropdown
+.custom-drop-down-container {
+  position: relative;
+  color: $black;
+  background-color: $white;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid $grey;
+  border-radius: 4px;
+  opacity: 1;
+  .custom-drop-down-container__control {
+    border: none;
+    &:hover {
+      border: none;
+    }
+  }
+  .custom-drop-down-container__indicator-separator {
+    display: none;
+  }
+  .custom-drop-down-container__indicator {
+    svg {
+      color: $black;
+      transform: rotate(0deg);
+    }
+  }
+  .custom-drop-down-container__control--menu-is-open {
+    border-bottom-color: transparent;
+    box-shadow: 2px 4px 2px $box_shadow_black !important;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  .custom-drop-down-container__control--is-focused {
+    box-shadow: 2px 4px 2px $box_shadow_black !important;
+  }
+  .custom-drop-down-container__menu {
+    border-radius: 0 0 4px 4px;
+    border: 1px solid $grey;
+    font-size: 14px;
+    opacity: 1;
+    box-shadow: 2px 4px 2px $box_shadow_black;
+    margin: 0;
+  }
+  .custom-drop-down-container__option--is-selected {
+    color: $blue;
+    background-color: $white;
+    font-weight: 600;
+  }
+  .custom-drop-down-container__option--is-focused {
+    color: $black;
+    background-color: $white;
+    font-weight: 600;
+  }
+}
+
+// tree dropdown
+.custom-tree-drop-down-container {
+  position: relative;
+  color: $black;
+  background-color: $white;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid $grey;
+  border-radius: 4px;
+  opacity: 1;
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border: none;
+    &:hover {
+      border: none;
+    }
+  }
+  .ant-select-arrow {
+    svg {
+      color: $black;
+    }
+  }
+  .custom-tree-drop-down-menu {
+    border-radius: 0 0 4px 4px;
+    border: 1px solid $grey;
+    font-size: 14px;
+    opacity: 1;
+    box-shadow: 2px 4px 2px $box_shadow_black;
+    margin: 0;
+    .ant-select-tree
+      .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+      color: $blue;
+      background-color: $white;
+      font-weight: 600;
+    }
+    .ant-select-tree .ant-select-tree-node-content-wrapper:hover {
+      color: $black;
+      background-color: $white;
+      font-weight: 600;
+    }
+  }
+}
+
+// search bar
+#search-bar {
+  input {
+    padding: 11px 14px;
+  }
+  button {
+    padding: 8px 12px;
+  }
+  fieldset {
+    top: 0;
+  }
+}
+
+//button
+.btn.btn-primary,
+.btn.btn-primary:hover,
+.btn.btn-secondary,
+.btn.btn-secondary:hover {
+  color: $white;
+}
+
+//badge style
+.MuiBadge-colorPrimary {
+  color: $white;
+  background-color: $dark-grey !important;
+}
+
+//rotate loader
+.rotate {
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+//center screen
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+input:focus,
+input.focus,
+input:focus-visible {
+  outline: none !important;
+}

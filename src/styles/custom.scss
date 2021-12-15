@@ -1,0 +1,18 @@
+$primary: #9d8641;
+$secondary: #666666;
+
+@import "~bootstrap/scss/bootstrap-utilities";
+
+//Generate utilites for Cursor
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      values: auto default pointer wait text move help not-allowed,
+    ),
+  )
+);
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";

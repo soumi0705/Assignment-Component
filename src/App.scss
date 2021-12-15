@@ -1,0 +1,15 @@
+@import './styles/common.scss';
+@import './styles/custom.scss';
+@import './styles/colors.scss';
+
+@font-face {
+  font-family: OpenSans;
+  src: local('OpenSans'), url(../src/assets/fonts/open-sans/OpenSans.ttf) format('truetype');
+}
+
+html,
+body {
+  height: 100%;
+  background-color: $light-grey;
+  font-family: OpenSans;
+}
